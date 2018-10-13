@@ -12,7 +12,7 @@ $thisPage="Home";
       <h1>Fahrrad-Rally</h1>
       <br>
       <br>
-            <p><b>Hallo ihr lieben, wir möchten die nächste Fahrrad Rally am Samstag den, <span class="underscore">11.05.2019</span> veranstalten.<br><br> Da wir leider noch kein Tehma haben, würden wir uns über Ideen freuen.<br><br> Also solltet ihr eine Idee haben, dann meldet euch doch einfach.</b></p>
+            <p><b>Hallo ihr lieben, wir möchten die nächste Fahrrad Rally am Samstag den, <span class="underscore">11.05.2019</span> veranstalten.<br><br> Da wir leider noch kein Tehma haben, würden wir uns über Ideen freuen.<br><br> Also solltet ihr eine Idee haben, dann meldet euch doch einfach mit einer E-Mail an: <span class="underscore">roby.ziegler@web.de</span>.</b></p>
 			<br>
       <br>
 			<p><b class="underscore">Teams ?</b><br>
