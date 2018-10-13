@@ -1,0 +1,838 @@
+/**
+  * Created by PhpStorm.
+  * User: Riccardo Schula
+  * Date: 3/8/18
+  * Time: 8:32 PM
+  */
+*
+{
+	box-sizing: border-box;
+}
+
+body
+{
+	margin:0;
+	padding: 0;
+}
+
+header
+{
+	background-image: url(/Pictures/header/frog-1703577_1280.jpg);
+	padding-top: 32.109375%; /* (img-height / img-width * container-width%) */
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+/* class to set things left on particular sections */
+.left
+{
+	text-align: left;
+}
+
+/* class to set things right on particular section */
+.right
+{
+	text-align: right;
+}
+
+/* class to underline particular sections */
+.underscore
+{
+	text-decoration: underline;
+}
+
+/* class to center particular sections */
+.center
+{
+	text-align: center;
+}
+
+/*****************************************************/
+/*                Navigation sidebar                 */
+/*****************************************************/
+
+/* the active page got the background color green */
+.active
+{
+	background-color: rgba(7, 7, 7, 0.22);
+}
+
+/*Hide checkbox*/
+nav input[type=checkbox]
+{
+    display: none;
+}
+
+/*Show menu when invisible checkbox is checked*/
+nav input[type=checkbox]:checked ~ #menu
+{
+    display: block;
+}
+
+.show-menu
+{
+    text-decoration: none;
+    color: orange;
+    background: gray;
+    text-align: center;
+    padding: 10px 0;
+    display: none;
+}
+
+nav ul
+{
+	background-color: gray;
+	list-style-type: none;
+	overflow: hidden;
+	min-width: 167px;
+	margin: 0;
+	padding: 0;
+}
+
+nav ul li
+{
+	border-right: 1.5px solid #bbb;
+    float: left;
+}
+
+nav ul li:last-child
+{
+	border-right: none;
+}
+
+nav ul li a
+{
+    background-color: gray;
+    color: Orange;
+    border: none;
+    text-align: center;
+    min-width: 155px;
+    cursor: pointer;
+}
+
+nav ul li.dropdown00, nav ul li.dropdown01, nav ul li.dropdown02, nav ul li.dropdown03
+{
+    position: static;
+    display: inline-block;
+}
+
+nav ul li div.dropdown_Strecken_content, nav ul li div.dropdown_Ergebnisse_content, nav ul li div.dropdown_Fragen_content, nav ul li div.dropdown_Bilder_content
+{
+    display: none;
+    position: absolute;
+    background-color: gray;
+    min-width: auto;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+		z-index :1;
+}
+
+nav ul li div.dropdown_Strecken_content a, nav ul li div.dropdown_Ergebnisse_content a, nav ul li div.dropdown_Fragen_content a, nav ul li div.dropdown_Bilder_content a, nav ul li a
+{
+    color: Orange;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+nav ul li div.dropdown_Strecken_content a:hover, nav ul li div.dropdown_Ergebnisse_content a:hover, nav ul li div.dropdown_Fragen_content a:hover, nav ul li div.dropdown_Bilder_content a:hover, nav ul li a:hover
+{
+    background-color: #2f2f2f;
+}
+
+nav ul li.dropdown00:hover .dropdown_Strecken_content, nav ul li.dropdown01:hover .dropdown_Ergebnisse_content, nav ul li.dropdown02:hover .dropdown_Fragen_content, nav ul li.dropdown03:hover .dropdown_Bilder_content
+{
+    display: block;
+}
+
+/**********************/
+/* Back to top button */
+/**********************/
+
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 30px; /* Place the button at the bottom of the page */
+    right: 20px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: red; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+}
+#myBtn::after
+{
+	content: 'Zurück nach oben';
+}
+
+#myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+}
+
+/*******************/
+/* General section */
+/*******************/
+
+section
+{
+	overflow: hidden;
+	display: block;
+	width: 50%;
+	min-width: 640px;
+	margin-left: 25%;
+	margin-top: 20px;
+	margin-bottom: 25px;
+	padding: 30px;
+	border: 1px solid black;
+	box-shadow: 1.5px 1.4px 20px 0;
+}
+
+/*************************/
+/* Main content Homepage */
+/*************************/
+
+section.main
+{
+	font-size: 1rem;
+	text-align: center;
+}
+
+section.main h1
+{
+	text-align: center;
+	text-decoration: underline;
+}
+
+section.main a.PDF
+{
+	text-decoration: none;
+	border: 1px solid black;
+	padding: 16px 14px 16px 14px;
+	color: black;
+	background-color: sandybrown;
+}
+
+section.main  div.contact
+{
+	text-align: center;
+	margin-lefT: 50%;
+}
+
+section.main div.contact label.center
+{
+	text-align: center;
+}
+
+section.main div.contact label.e-mail
+{
+	text-decoration: underline;
+}
+
+/* Image editing Main Homepage */
+section.main img.pictur01
+{
+	width: 240px;
+}
+section.main img.pictur02
+{
+	height: 250px;
+}
+section.main img.pictur03
+{
+	width: 240px;
+}
+
+/***********************/
+/* Style route content */
+/***********************/
+
+section.route
+{
+	font-size: 1rem;
+}
+
+section.route h2
+{
+	text-decoration: underline;
+	font-weight: bold;
+	text-align: center;
+	color: red;
+}
+
+section.route img.picture01_2015
+{
+	width: 300px;
+}
+
+/*************************/
+/* Style results content */
+/*************************/
+
+section.results
+{
+	font-size: 1rem;
+	text-align: Left;
+}
+
+section.results h2
+{
+	text-align: center;
+	text-decoration: underline;
+	text-weight: bold;
+	color: red;
+}
+
+section.results table
+{
+	width: 90%;
+	margin-left: 5%;
+}
+
+section.results table tr th
+{
+	text-align: center;
+}
+
+section.results table
+{
+	border: 1px solid black;
+	padding: 2px;
+}
+
+section.results table tr th , section.results table tr td
+{
+	border: 1px solid black;
+}
+
+/****************************/
+/* Style results_comingsoon */
+/****************************/
+
+section.results_comingsoon
+{
+	padding-top: 255px;
+	padding-bottom: 255px;
+	font-size: 1.5rem;
+	font-weight: bold;
+	text-align: center;
+}
+
+/************************/
+/* Style questions_2018 */
+/************************/
+
+section.questions
+{
+	font-size: 1rem;
+}
+
+section.questions h2
+{
+	text-align: center;
+	text-decoration: underline;
+	text-weight: bold;
+	color: red;
+}
+
+section.questions table
+{
+	width: 90%;
+	margin-left: 5%;
+}
+
+section.questions table tr th
+{
+	text-align: left;
+}
+
+section.questions table tr td
+{
+	text-align: center;
+}
+
+section.questions table tr th, section.questions table tr td
+{
+	border: 1px solid black;
+	padding: 5px;
+}
+
+/******************************/
+/*   Style questions_2014     */
+/* special style still in use */
+/******************************/
+
+section.questions_2014
+{
+	font-size: 1rem;
+}
+
+section.questions_2014 h2
+{
+	text-align: center;
+	text-decoration: underline;
+	text-weight: bold;
+	color: red;
+}
+
+section.questions_2014 table
+{
+	width: 90%;
+	margin-left: 5%
+}
+
+section.questions_2014 table tr th, section.questions_2014 table tr td
+{
+	border: 1px solid black;
+	height: 2rem;
+}
+
+/***************************/
+/* Style impressum content */
+/***************************/
+
+section.imp
+{
+	font-size: 1.5rem;
+	min-height: 28.3rem;
+}
+
+/*************************/
+/* Style chronic content */
+/*************************/
+
+section.chron
+{
+	font-size: 1rem;
+}
+
+section.chron table
+{
+	width: 80%;
+	margin-left: 10%;
+}
+
+section.chron p
+{
+	margin-lefT: 10%;
+}
+
+/***************************/
+/* Style Error 404 content */
+/***************************/
+
+section.ErrorSiteNotFound
+{
+	text-align: center;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+section.ErrorSiteNotFound img
+{
+	width: 50%;
+}
+
+/************************/
+/* Style presse content */
+/************************/
+
+section.press img.presspictur01
+{
+	width: 750px;
+}
+
+/******************/
+/* pictures Style */
+/******************/
+
+section.picutres
+{
+	box-sizing: border-box;
+}
+
+section.pictures h1
+{
+	text-align: center;
+	text-weight: bold;
+	text-decoration: underline;
+}
+
+section.pictures .zoom:hover
+{
+	transform: scale(1.5); /* 150% zoom - Note: if the zoom is to large, it will go outside of the viewport */
+}
+
+section.pictures .row > section.pictures .column {
+	padding: 0 8px;
+}
+
+section.pictures .row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+section.pictures .column {
+	float: left;
+	width: 25%;
+  padding: 10px;
+}
+
+/* The Modal (background) */
+section.pictures .modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	padding-top: 100px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: black;
+}
+
+/* Modal Content */
+section.pictures .modal-content {
+	position: absolute;
+	background-color: #fefefe;
+	margin: auto;
+	padding: 0;
+	top: 50%;
+	left: 50%;
+	width: auto;
+	height: auto;
+	max-width: 700px;
+	max-height: 600px;
+	transform: translate(-50%,-50%);
+}
+
+/* The Close Button */
+section.pictures .close {
+	color: white;
+	position: absolute;
+	top: 10px;
+	right: 25px;
+	font-size: 35px;
+	font-weight: bold;
+}
+
+section.pictures .close:hover,
+section.pictures .close:focus {
+	color: #999;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+section.pictures .mySlides {
+	display: none;
+}
+
+section.pictures .cursor {
+	cursor: pointer
+}
+
+/* Next & previous buttons */
+section.pictures .prev,
+section.pictures .next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	padding: 16px;
+	margin-top: -50px;
+	color: white;
+	font-weight: bold;
+	font-size: 50px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+	-webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+section.pictures .next {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+section.pictures .prev:hover,
+section.pictures .next:hover {
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+section.pictures .numbertext {
+	color: #f40e7d;
+	font-size: 20px;
+	font-weight: bold;
+	padding: 8px 12px;
+	position: absolute;
+	top: 0;
+}
+
+section.pictures img {
+	margin-bottom: -4px;
+}
+
+section.pictures .caption-container {
+	text-align: center;
+	background-color: black;
+	padding: 2px 16px;
+	color: white;
+}
+
+section.pictures .demo {
+	opacity: 0.6;
+}
+
+section.pictures .active,
+section.pictures .demo:hover {
+	opacity: 1;
+}
+
+section.pictures img.hover-shadow {
+	transition: 0.4s
+}
+
+section.pictures .hover-shadow:hover {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.22)
+}
+
+/****************/
+/* footer style */
+/****************/
+
+footer
+{
+	box-shadow: 1px 1px 16px 0;
+	display: block;
+	width: 80%;
+	margin-left: 10%;
+	padding: 14px 16px;
+	background-color: lightgray;
+}
+
+footer p
+{
+  color: dimgray;
+	font-size: 17px;
+}
+
+/****************************/
+/* Media style of all Pages */
+/****************************/
+
+@media screen and (max-width: 1500px)
+{
+	/* General section */
+	section { width: 60%; margin-left: 20%; min-width: 540px;}
+
+	/* Picture section Main */
+	section.main img.pictur01 { width: 230px; height: 109.5px;}
+	section.main img.pictur03 { width: 230px; height: 109.5px;}
+	section.main img.pictur02 { width: 135px; height: 240px;}
+
+	/* Picture section presse */
+	section.press img.presspictur01 {width: 540px;}
+
+}
+
+@media screen and (max-device-width: 1225px)
+{
+	/*Display 'show menu' link*/
+    .show-menu {display:block;}
+
+    /* Navigation part of the page */
+		#menu{box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);}
+    nav ul {display: none;}
+    nav ul li{ float: none; border-right: none; border-bottom: 1px solid white;}
+		nav ul li:last-child{border-bottom: none;}
+		nav ul li:first-child{border-top: 1px solid white;}
+    nav ul li.dropdown00, nav ul li.dropdown01, nav ul li.dropdown02, nav ul li.dropdown03{display: block;}
+    .dropdown_Strecken_content, .dropdown_Ergebnisse_content, .dropdown_Fragen_content, .dropdown_Bilder_content{width: 100%; position: relative !important; box-shadow: none !important;}
+
+		/* Button style (back to the Top) */
+		#myBtn::after{content: '';}
+
+    /* General section */
+    section {width: 75%; min-width: 440px; margin-left: 12.5%;}
+
+    /* route pages */
+    section.route {font-size: 0.8rem;}
+    section.route img.yotibis {width: 119px; height: 73px;}
+
+    /* results pages */
+	section.results {font-size: 0.75rem;}
+	section.results table {width: 80%; margin-left: 10%;}
+
+    /* chronik page */
+    section.chron {font-size: 0.8rem;}
+
+    /* Picture section presse */
+	section.press img.presspictur01 {width: 480px;}
+
+    /* pictures page */
+    section.pictures .modal-content { width: 50%;}
+    section.pictures .column {width: 30%;}
+
+    /* Footer part of the page */
+    footer {margin-left: 7%; width: 85%;}
+}
+
+@media screen and (max-width: 635px)
+{
+	/*Display 'show menu' link*/
+    .show-menu {display:block;}
+
+    /* Navigation part of the page */
+    nav ul {display: none;}
+    nav ul li{ float: none; border-right: none;}
+
+    /* General section */
+    section { margin-left: 10%; width: 80%; min-width: 340px;}
+
+    /* Main page */
+    section.main {font-size: 0.9rem;}
+
+    /* route pages */
+    section.route {font-size: 0.75rem}
+    section.route img.yotibis {width: 69px; height: 43px; margin-left: 30px;}
+
+    /* results pages */
+	section.results {font-size: 0.7rem;}
+	section.results table {width: 95%; margin-left: 2.5%;}
+
+    /* chronik page */
+    section.chron {font-size: 0.65rem;}
+
+    /* Picture section presse */
+	section.press img.presspictur01 {width: 360px;}
+
+    /* pictures page */
+    section.pictures .modal-content { width: 55%;}
+    section.pictures .column {width: 40%;}
+
+    /* Footer part of the page */
+    footer {margin-left: 5.5%; width: 88%;}
+}
+
+@media screen and (max-width: 438px)
+{
+	/*Display 'show menu' link*/
+    .show-menu {display:block;}
+
+    /* Navigation part of the page */
+    nav ul {display: none;}
+    nav ul li{ float: none; border-right: none;}
+
+    /* General section */
+    section { margin-left: 10%; width: 80%; min-width: 240px;}
+
+    /* Main page */
+    section.main {font-size: 0.83rem;}
+
+    /* route pages */
+    section.route {font-size: 0.7rem;}
+    section.route img.yotibis {width: 59px; height: 33px; margin-left: 20px;}
+
+    /* results pages */
+	section.results {font-size: 0.65rem;}
+	section.results table {width: 95%; margin-left: 2.5%;}
+
+    /* results_comingsoon page */
+    section.results_comingsoon {padding-top: 175px; padding-bottom: 175px;}
+
+    /* chronik page */
+    section.chron {font-size: 0.575rem;}
+
+    /* Picture section presse */
+	section.press img.presspictur01 {width: 345px;}
+
+    /* pictures page */
+    section.pictures .modal-content { width: 60%;}
+    section.pictures .column {width: 45%;}
+
+    /* Footer part of the page */
+    footer {margin-left: 5.75%; width: 88%;}
+}
+
+@media screen and (max-width: 400px)
+{
+	/*Display 'show menu' link*/
+    .show-menu {display:block;}
+
+    /* Navigation part of the page */
+    nav ul {display: none;}
+    nav ul li{ float: none; border-right: none;}
+
+    /* General section */
+    section { display: block; margin-left: 10%; width: 80%; min-width: 200px;}
+
+    /* Main page */
+    section.main {font-size: 0.75rem;}
+    section.main div.contact {margin-left: 17%;}
+
+    /* route pages */
+    section.route_2017 {font-size: 0.65rem;}
+
+    /* results pages */
+	section.results {font-size: 0.63rem;}
+	section.results table {width: 100%; margin-left: 0;}
+
+    /* results_comingsoon page */
+    section.results_comingsoon {padding-top: 180px; padding-bottom: 180px;}
+
+    /* chronik page */
+    section.chron {font-size: 0.5rem;}
+
+    /* Picture section presse */
+	section.press img.presspictur01 {width: 250px;}
+
+    /* pictures page */
+    section.pictures .column {width: 50%;}
+
+    /* Footer part of the page */
+    footer {margin-left: 5.5%;}
+}
+
+@media screen and (max-width: 365px)
+{
+	/*Display 'show menu' link*/
+    .show-menu {display:block;}
+
+    /* Navigation part of the page */
+    nav ul {display: none;}
+    nav ul li{ float: none; border-right: none;}
+
+    /* General section */
+    section { display: block; margin-left: 10%; width: 80%; min-width: 180px; box-shadow: none; border: none;}
+
+    /* Main page */
+    section.main {font-size: 0.7rem;}
+    section.main div.contact {margin-left: 17%;}
+
+    /* route pages */
+    section.route {font-size: 0.65rem;}
+    section.route img.picture01_2015 {width: 250px;}
+
+    /* results pages */
+		section.results {font-size: 0.63rem;}
+		section.results table {width: 100%; margin-left: 0;}
+
+    /* results_comingsoon page */
+    section.results_comingsoon {padding-top: 170px; padding-bottom: 170px;}
+
+    /* chronik page */
+    section.chron {font-size: 0.5rem;}
+
+    /* pictures page */
+    section.pictures .modal-content { width: 65%;}
+
+    /* Footer part of the page */
+    footer {margin-left: 5.75%;}
+}
